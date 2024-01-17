@@ -21,8 +21,7 @@ def toggle_led2(timer):
     myLED2.value(not myLED2.value())
     
 def toggle_speaker(timer):
-    myBuzzer.value(not mySpeaker.value())
-    
+    myBuzzer.value(not myBuzzer.value())  
 
 # frumstilli tímera á tima sem við viljum 1000, 500 og 100, tímerar eru stilltir sem reglubundið kall (PERIODIC)
 def startTimers():
@@ -40,6 +39,7 @@ while True:
         myTimer.deinit()
         myTimer1.deinit()
         myTimer2.deinit()
-        mySpeaker.value(0)
+        myBuzzer.value(0)
     time.sleep(2)# hægi á keyrslu til að debuga, óþarfi í raun
+
 ```
